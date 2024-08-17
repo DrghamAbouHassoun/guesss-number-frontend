@@ -31,3 +31,53 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* Customize the width/height of the scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 12px;
+}
+
+/* Track (background) */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #3330;
+  border-radius: 10px;
+}
+
+/* Handle (thumb) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle (thumb) on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Optional: Adding a shadow or border to the thumb */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Optional: Styling the corner where vertical and horizontal scrollbars meet */
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: #333;
+}
+
+@keyframes OverlayTranslate {
+  0% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+.overlay-translate {
+  transform: translateX(50px);
+  animation-name: OverlayTranslate;
+  /* animation-duration: 12s; */
+}
