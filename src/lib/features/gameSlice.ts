@@ -4,6 +4,7 @@ import randomNumberGenerator, {
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface InitialState {
+  currentGameId: string;
   roundSpeed: number;
   randomPoint: number;
   currentPoints: number;
@@ -25,6 +26,7 @@ interface InitialState {
 }
 
 const initialState: InitialState = {
+  currentGameId: "",
   roundSpeed: 1,
   currentRound: 0,
   randomPoint: 10,

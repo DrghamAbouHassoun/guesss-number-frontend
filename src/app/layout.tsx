@@ -4,6 +4,7 @@ import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import { ThemeModeScript } from "flowbite-react";
 import AuthProvider from "@/providers/AuthProvider";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,17 @@ export default function RootLayout({
         <StoreProvider>
           <AuthProvider>
             {children}
+            <Toaster 
+              toastOptions={{
+                // Define default options
+                className: '',
+                duration: 5000,
+                style: {
+                  background: 'rgb(17, 24, 39)',
+                  color: 'rgb(229, 231, 235)',
+                },
+              }}
+            />
           </AuthProvider>
         </StoreProvider>
       </body>
